@@ -22,7 +22,8 @@ namespace SwecorTestSavchenko
 
         private void OnAddEntityToRemoveList(IEntity entityToRemove)
         {
-            entitiesToRemove.Add(entityToRemove);
+            if (entitiesToRemove.Contains(entityToRemove) == false)
+                entitiesToRemove.Add(entityToRemove);
         }
 
         private void OnCollisionsChecked()

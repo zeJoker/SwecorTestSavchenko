@@ -9,6 +9,8 @@ namespace SwecorTestSavchenko
 
         private void Awake()
         {
+            Screen.SetResolution(540, 960, FullScreenMode.Windowed);
+
             engine = GetComponent<Engine>();
             engine.AddSystem(GetComponent<InputSystem>());
             engine.AddSystem(GetComponent<EnemySpawnSystem>());
